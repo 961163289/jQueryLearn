@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * Callback 函数
+         *  - 当动画 100% 完成后，即调用 Callback 函数。
+         *  - 语法: $(selector).hide(speed,callback)
+         *  - callback 参数是一个在 hide 操作完成后被执行的函数。
+         *  - 结论：如果您希望在一个涉及动画的函数之后来执行语句，请使用 callback 函数。
+         */
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide(2000, function () {
+                    alert("The paragraph is now hidden");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button type="button">Hide</button>
+<p>This is a paragraph with little content.</p>
+
+</body>
+</html>

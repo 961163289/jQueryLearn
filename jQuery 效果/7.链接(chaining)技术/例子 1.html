@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * jQuery Chaining
+         *  - 通过 jQuery，您可以把动作/方法链接起来。
+         *  - Chaining 允许我们在一条语句中允许多个 jQuery 方法（在相同的元素上）。
+         *
+         *  提示:
+         *      这样的话，浏览器就不必多次查找相同的元素。
+         *      如需链接一个动作，您只需简单地把该动作追加到之前的动作上。
+         *
+         *      当进行链接时，代码行会变得很差。
+         *      不过，jQuery 在语法上不是很严格；您可以按照希望的格式来写，包含折行和缩进。
+         */
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#p1").css("color", "red")
+                    .slideUp(2000)
+                    .slideDown(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p id="p1">jQuery 乐趣十足!</p>
+<button>点击这里</button>
+
+</body>
+</html>

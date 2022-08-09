@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * 不同的元素中删除指定的 class 属性：
+         */
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1,h2,p").removeClass("blue");
+            });
+        });
+    </script>
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="blue">标题 1</h1>
+<h2 class="blue">标题 2</h2>
+<p class="blue">这是一个段落。</p>
+<p>这是另一个段落。</p>
+<br>
+<button>从元素上删除类</button>
+
+</body>
+</html>

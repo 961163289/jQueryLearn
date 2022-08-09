@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * 设置指定的 <div> 元素的宽度和高度：
+         */
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").width(320).height(320);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="div1"
+     style="height:100px;width: 300px;padding:10px;margin:3px;
+     border:1px solid blue;background-color:lightblue;"></div>
+<br>
+<button>调整 div 的尺寸</button>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * append() 和 prepend() 方法能够通过参数接收无限数量的新元素。
+         * 可以通过 jQuery 来生成文本/HTML（就像上面的例子那样），
+         *  或者通过 JavaScript 代码和 DOM 元素。
+         */
+        function appendText() {
+            var txt1 = "<p>Text.</p>" //以 HTML 创建新元素
+            var txt2 = $("<p></p>").text("Text."); //以 jQuery 创建新元素
+            var txt3 = document.createElement("p");
+            txt3.innerHTML = "Text."; //通过 DOM 来创建文本
+
+            $("body").append(txt1, txt2, txt3); //追加新元素
+        }
+    </script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button onclick="appendText()">追加文本</button>
+
+</body>
+</html>

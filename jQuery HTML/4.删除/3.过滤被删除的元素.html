@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * jQuery remove() 方法也可以接收一个参数，允许您对被删除元素进行过滤。
+         * 该参数可以是任何 jQuery 选择器的语法。
+         */
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").remove(".italic");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>This is a paragraph in the div.</p>
+<p class="italic"><i>This is another paragraph in the div.</i></p>
+<p class="italic"><i>This is another paragraph in the div.</i></p>
+
+<button>删除 class="italic" 的所有 p 元素</button>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * width() 和 height() 方法
+         *  width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。
+         *  height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。
+         */
+        $(document).ready(function () {
+            $("button").click(function () {
+                var txt = "";
+                txt += "Width of div：" + $("#div1").width() + "</br>";
+                txt += "Height of div：" + $("#div1").height() + "</br>";
+                $("#div1").html(txt);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="div1"
+     style="height:100px;width: 300px;padding:10px;margin:3px;
+     border:1px solid blue;background-color:lightblue;"></div>
+<br>
+<button>显示 div 的尺寸</button>
+<p>width() - 返回元素的宽度。</p>
+<p>height() - 返回元素的高度。</p>
+
+</body>
+</html>

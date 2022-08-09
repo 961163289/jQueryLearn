@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * 不同的元素中删除指定的 class 属性：
+         */
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1,h2,p").toggleClass("blue");
+            });
+        });
+    </script>
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<h1>标题 1</h1>
+<h2>标题 2</h2>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+<button>切换 CSS 类</button>
+
+</body>
+</html>

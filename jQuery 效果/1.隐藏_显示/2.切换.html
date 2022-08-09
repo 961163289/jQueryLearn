@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * toggle()
+         *  - 实现切换 hide() 和 show() 方法
+         *  - 显示被隐藏的元素,并隐藏已显示的元素
+         *
+         *  参数:
+         *      参数一: speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。
+         *      参数二: callback 参数是 toggle() 方法完成后所执行的函数名称。
+         */
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+<button type="button">切换</button>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+</body>
+</html>
