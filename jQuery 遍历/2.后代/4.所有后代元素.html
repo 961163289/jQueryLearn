@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * find()
+         *  - * 表示所有
+         */
+        $(document).ready(function () {
+            $("div").find("*").css({
+                "color": "red",
+                "border": "2px solid red"
+            });
+        });
+    </script>
+    <style>
+        .descendants * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="descendants" style="width: 500px">div (当前元素)
+    <p>p (子)
+        <span>span (孙)</span>
+    </p>
+    <p>p (child)
+        <span>span (孙)</span>
+    </p>
+</div>
+
+</body>
+</html>

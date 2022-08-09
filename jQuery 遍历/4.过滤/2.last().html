@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * last()
+         *  - 返回被选元素的最后一个元素。
+         */
+        $(document).ready(function () {
+            //选择最后一个 <div> 元素中的最后一个 <p> 元素
+            $("div p").last().css("background-color", "yellow");
+        });
+    </script>
+</head>
+<body>
+
+<h1>欢迎来到我的主页</h1>
+<div>
+  <p>这是 div1 中的一个段落</p>
+</div>
+
+<div>
+    <P>这是 div2 中的第一个段落</P>
+    <P>这是 div2 中的第二个段落</P>
+</div>
+
+</body>
+</html>

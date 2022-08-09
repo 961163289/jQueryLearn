@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * children()
+         *  - 您也可以使用可选参数来过滤对子元素的搜索。
+         */
+        $(document).ready(function () {
+            $("div").children("p.1").css({
+                "color": "red",
+                "border": "2px solid red"
+            });
+        });
+    </script>
+    <style>
+        .descendants * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="descendants" style="width: 500px">div (当前元素)
+    <p class="1">p (子)
+        <span>span (孙)</span>
+    </p>
+    <p class="2">p (child)
+        <span>span (孙)</span>
+    </p>
+    <span class="1">span (子)</span>
+</div>
+
+</body>
+</html>

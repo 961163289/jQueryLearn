@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        /**
+         * nextUntil()
+         *  - 返回介于两个给定参数之间的所有跟随的同胞元素。
+         *
+         * jQuery prev(), prevAll(), prevUntil()
+         *  - 工作方式与上面的方法类似，只不过方向相反而已：
+         *  它们返回的是前面的同胞元素（在 DOM 树中沿着同胞元素向后遍历，而不是向前）。
+         */
+        $(document).ready(function () {
+            $("h2").nextUntil("h6").css({
+                "color": "red",
+                "border": "2px solid red"
+            });
+        });
+    </script>
+    <style>
+        .siblings * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body class="siblings">
+
+<div>div (父)
+    <p>p</p>
+    <span>span</span>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <p>p</p>
+</div>
+
+</body>
+</html>
